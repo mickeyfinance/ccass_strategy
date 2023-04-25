@@ -40,7 +40,7 @@ def stock_filter(df, broker_holding_change, concentration_crit):
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="91692388",
+  password="xxxxxx",
   database="ccass_data"
 )
 mycursor = mydb.cursor()
@@ -48,5 +48,3 @@ stock_list = mycursor.execute("SELECT DISTINCT stock_code FROM holdings")
 stock_list = mycursor.fetchall()
 """
 ##########
-#ccass_df = pd.read_json(os.getcwd()+'/data/sample_data.json', convert_dates=['record_date'])
-#ccass_df = pd.read_csv(os.getcwd()+'/data/sample_data.csv',parse_dates= ["record_date"])
