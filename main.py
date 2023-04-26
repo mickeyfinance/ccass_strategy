@@ -78,7 +78,7 @@ class MyStrategy(bt.Strategy):
 
 
 
-def backtesting(backtest_list, start_date, end_date):
+def backtesting(backtest_list, start_date, end_date, init_cash, broker_com):
       
     cerebro = bt.Cerebro()
 
@@ -151,5 +151,5 @@ if __name__ == '__main__':
             # Record the stock and dates that satisfy the requirements.
             backtest_list.append([stock, filter_result.index[filter_result].tolist()])
        
-    backtesting(backtest_list, start_date, end_date)
+    backtesting(backtest_list, start_date, end_date, init_cash, broker_com)
         

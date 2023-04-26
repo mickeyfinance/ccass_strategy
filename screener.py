@@ -22,7 +22,7 @@ def stock_filter(df, broker_holding_change, concentration_crit):
     
 
     # Criteria 2: check if retail type broker decreases   
-    df['Criteria2'] = ((df['Retail'].diff()+df['Institution'].diff())<df['unknown'].diff())
+    df['Criteria2'] = ((df['Retail'].diff())<df['unknown'].diff())
 
     # Criteria 3: concentration - top 5 brokers occupy a certain percentage in ccass
     df['Criteria3'] = df.select_dtypes('number').apply(lambda r: r.nlargest(5).sum(), axis=1)>concentration_crit
