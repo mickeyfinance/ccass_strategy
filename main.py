@@ -78,7 +78,7 @@ class MyStrategy(bt.Strategy):
 
 
 
-def backtesting(backtest_list, start_date, end_date, init_cash, broker_com):
+def backtesting(backtest_list, start_date, end_date, init_cash, broker_com, MyStrategy):
       
     cerebro = bt.Cerebro()
 
